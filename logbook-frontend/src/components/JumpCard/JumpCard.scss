@@ -1,0 +1,10 @@
+.jump-card {
+  border: solid black 2px;
+  width: 20rem;
+  padding: 2rem;
+
+  &__entry {
+    display: flex;
+    justify-content: space-between;
+  }
+}
