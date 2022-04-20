@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 import static java.lang.Integer.parseInt;
 
@@ -24,15 +25,39 @@ public class JumpController {
         jumps.add(jump2);
     }
 
+    @GetMapping("/test")
+    public String test(){
+        return "working";
+    }
 
     @GetMapping("/jumps")
     public ArrayList<Jump> getJumps(){
         return jumps;
     }
 
-    @GetMapping("/test")
-    public String test(){
-        return "working";
+    @GetMapping("/jump/{jumpNumber}")
+    public Jump getJumpById(@PathVariable String jumpNumber){
+        for (Jump jump: jumps) {
+            if (jump.getJumpNumber() == parseInt(jumpNumber)){
+                return jump;
+            }
+        }
+        return null;
+    }
+
+    @PostMapping("/jump")
+    public String addJump(@RequestBody Jump jump){
+        jumps.add(jump);
+        return "Jump added";
+    }
+
+    @DeleteMapping("/jump/{jumpNumber}")
+    public String deleteJump(@PathVariable String jumpNumber){
+        boolean isDeleted = jumps.removeIf(jump -> jump.getJumpNumber() == parseInt(jumpNumber));
+        if (isDeleted) {
+            return "Jump number " + jumpNumber + " was deleted";
+        }
+        return "Jump number " + jumpNumber + " not found, can't delete";
     }
 
 

@@ -72,15 +72,15 @@ public class Jump {
         this.freefallTime = freefallTime;
     }
 
-//    @Override
-//    public String toString() {
-//        return "Jump{" +
-//                "jumpNumber='" + jumpNumber + '\'' +
-//                ", date='" + date + '\'' +
-//                ", dropzone='" + dropzone + '\'' +
-//                ", typeOfJump='" + typeOfJump + '\'' +
-//                ", altitude='" + altitude + '\'' +
-//                ", freefallTime=" + freefallTime +
-//                '}';
-//    }
+    @Override
+    public String toString() {
+        return "Jump{" +
+                "jumpNumber='" + jumpNumber + '\'' +
+                ", date='" + date + '\'' +
+                ", dropzone='" + dropzone + '\'' +
+                ", typeOfJump='" + typeOfJump + '\'' +
+                ", altitude='" + altitude + '\'' +
+                ", freefallTime=" + freefallTime +
+                '}';
+    }
 }
