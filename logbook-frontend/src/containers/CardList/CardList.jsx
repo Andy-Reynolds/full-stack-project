@@ -2,14 +2,14 @@ import React from "react";
 import JumpCard from "../../components/JumpCard/JumpCard";
 import "./CardList.scss";
 
-const CardList = ({ logbookEntries }) => {
-  const cardListJSX = logbookEntries.map((jump) => {
+const CardList = ({ logbookEntries, jumpData }) => {
+  const cardListJSX = jumpData.map((jump) => {
     return (
       <JumpCard
         key={jump.jumpNumber}
         jumpNumber={jump.jumpNumber}
         date={jump.date}
-        dropZone={jump.dropZone}
+        dropzone={jump.dropzone}
         typeOfJump={jump.typeOfJump}
         altitude={jump.altitude}
         freefallTime={jump.freefallTime}

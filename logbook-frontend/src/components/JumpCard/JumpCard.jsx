@@ -4,7 +4,7 @@ import "./JumpCard.scss";
 const JumpCard = ({
   jumpNumber,
   date,
-  dropZone,
+  dropzone,
   typeOfJump,
   altitude,
   freefallTime,
@@ -21,7 +21,7 @@ const JumpCard = ({
       </div>
       <div className="jump-card__entry">
         <h3 className="jump-card__label">Dropzone:</h3>
-        <p className="jump-card__input">{dropZone}</p>
+        <p className="jump-card__input">{dropzone}</p>
       </div>
       <div className="jump-card__entry">
         <h3 className="jump-card__label">Type of Jump:</h3>

@@ -2,9 +2,12 @@ package com.project.logbookjava;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.web.bind.annotation.CrossOrigin;
 
-@SpringBootApplication
+// TODO: Need to remove exclude before hooking up to SQL
+
+@SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
 @CrossOrigin
 public class LogbookJavaApplication {
 
