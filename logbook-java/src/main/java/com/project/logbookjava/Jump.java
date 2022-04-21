@@ -1,9 +1,11 @@
 package com.project.logbookjava;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class Jump {
+    @Id
     private int jumpNumber;
     private String date;
     private String dropzone;

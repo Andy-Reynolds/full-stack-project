@@ -8,8 +8,10 @@ import "./styles/main.scss";
 function App() {
   const [jumpData, setJumpData] = useState([]);
 
+  const url = "https://logbook-project-347913.nw.r.appspot.com/jumps";
+
   const getJumps = async () => {
-    const response = await fetch("http://localhost:8080/jumps");
+    const response = await fetch(url);
     const data = await response.json();
 
     setJumpData(data);

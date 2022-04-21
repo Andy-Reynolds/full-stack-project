@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 
 // TODO: Need to remove exclude before hooking up to SQL
 
-@SpringBootApplication(exclude={DataSourceAutoConfiguration.class})
+@SpringBootApplication
 @CrossOrigin
 public class LogbookJavaApplication {
 
