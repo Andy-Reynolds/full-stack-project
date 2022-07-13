@@ -33,7 +33,7 @@ const JumpCard = ({
       </div>
       <div className="jump-card__entry">
         <h3 className="jump-card__label">Freefall Time:</h3>
-        <p className="jump-card__input">{freefallTime}</p>
+        <p className="jump-card__input">{freefallTime} seconds</p>
       </div>
     </div>
   );

@@ -1,10 +1,26 @@
+@use "../../styles/_variables.scss" as *;
+
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 2rem;
+  background-color: $colour-primary;
+  margin-bottom: 2rem;
+
+  &__header {
+    color: $colour-font-secondary;
+  }
 
   &__item {
     text-decoration: none;
-    color: black;
+    color: $colour-font-secondary;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: $desktop-breakpoint) {
+  .navbar {
+    padding: 2rem 3rem;
   }
 }

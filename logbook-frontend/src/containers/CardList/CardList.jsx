@@ -3,7 +3,7 @@ import JumpCard from "../../components/JumpCard/JumpCard";
 import "./CardList.scss";
 
 const CardList = ({ logbookEntries, jumpData }) => {
-  const cardListJSX = jumpData.map((jump) => {
+  const cardListJSX = logbookEntries.map((jump) => {
     return (
       <JumpCard
         key={jump.jumpNumber}
